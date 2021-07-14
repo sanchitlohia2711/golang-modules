@@ -8,13 +8,13 @@ import (
 func main() {
 	sampleRegex := regexp.MustCompile("abc|xyz")
 
-	match := sampleRegex.Match([]byte("abcxyz"))
-	fmt.Println(match)
-
-	match = sampleRegex.Match([]byte("abc"))
+	match := sampleRegex.Match([]byte("abc"))
 	fmt.Println(match)
 
 	match = sampleRegex.Match([]byte("xyz"))
+	fmt.Println(match)
+
+	match = sampleRegex.Match([]byte("abcxyz"))
 	fmt.Println(match)
 
 	match = sampleRegex.Match([]byte("abd"))
