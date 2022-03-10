@@ -4,11 +4,6 @@ import (
 	"net/http"
 )
 
-var (
-	username = "abc"
-	password = "123"
-)
-
 func main() {
 	handler := http.HandlerFunc(handleRequest)
 	http.Handle("/example", handler)

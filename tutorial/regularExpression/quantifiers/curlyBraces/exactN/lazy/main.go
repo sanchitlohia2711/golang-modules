@@ -6,14 +6,14 @@ import (
 )
 
 func main() {
-	sampleRegexp := regexp.MustCompile(`b{2}?`)
+	sampleRegexp := regexp.MustCompile(`ab{2,4}?`)
 
-	matches := sampleRegexp.FindStringSubmatch("bb")
+	matches := sampleRegexp.FindString("abb")
 	fmt.Println(matches)
 
-	matches = sampleRegexp.FindStringSubmatch("bbb")
+	matches = sampleRegexp.FindString("abbb")
 	fmt.Println(matches)
 
-	matches = sampleRegexp.FindStringSubmatch("bbbb")
+	matches = sampleRegexp.FindString("abbbb")
 	fmt.Println(matches)
 }
