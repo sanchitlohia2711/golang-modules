@@ -1,4 +1,4 @@
-func test(x int, y int) {
+func test2(x int, y int) {
 	var char [255]string
 
 	for i := 0; i < 255; i++ {
